@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto | GLOW NAILS STUDIO</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffd6ec, #d9c2ff);
+            color: #222;
+            text-align: center;
+        }
+
+        nav {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+        nav a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+        nav a:hover {
+    color: white;
+    background: #d63384;
+}
+
+        .contenido {
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .contacto {
+            background: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        button {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+        }
+
+        .whatsapp {
+            display: inline-block;
+            margin-top: 25px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+
+            h1 {
+                font-size: 38px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 15px;
+            }
+
+            .contacto {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <main class="contenido">
+
+        <h1>Contáctanos 💌</h1>
+
+        <p class="subtitulo">
+            ¿Lista para darle un glow a tus uñas? ✨
+        </p>
+
+        <div class="contacto">
+
+            <form id="formularioReserva">
+
+    <label for="nombre">Nombre</label>
+    <input
+        type="text"
+        id="nombre"
+        placeholder="Escribe tu nombre"
+        required
+    >
+
+    <label for="telefono">Teléfono</label>
+    <input
+        type="tel"
+        id="telefono"
+        placeholder="Tu número de teléfono"
+        required
+    >
+
+    <label for="servicio">Servicio</label>
+
+    <select id="servicio" required>
+        <option value="">Selecciona un servicio</option>
+        <option value="Manicura">💅 Manicura - RD$ 800</option>
+        <option value="Uñas acrílicas">✨ Uñas acrílicas - RD$ 1,500</option>
+        <option value="Nail Art">🌸 Nail Art - Desde RD$ 500</option>
+    </select>
+
+    <label for="mensaje">Mensaje</label>
+
+    <textarea
+        id="mensaje"
+        placeholder="Escribe algún detalle adicional..."
+        required
+    ></textarea>
+
+    <button type="submit">
+        Enviar reserva 💖
+    </button>
+
+</form>
+
+            <a
+                class="whatsapp"
+                href="https://wa.me/18095555555"
+                target="_blank"
+            >
+                💬 Reservar por WhatsApp
+            </a>
+
+        </div>
+
+    </main>
+<script>
+const parametros = new URLSearchParams(window.location.search);
+const servicioSeleccionado = parametros.get("servicio");
+
+if (servicioSeleccionado === "manicura") {
+    document.getElementById("servicio").value = "Manicura";
+}
+
+if (servicioSeleccionado === "acrilicas") {
+    document.getElementById("servicio").value = "Uñas acrílicas";
+}
+
+if (servicioSeleccionado === "nailart") {
+    document.getElementById("servicio").value = "Nail Art";
+}
+    document.getElementById("formularioReserva").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const nombre = document.getElementById("nombre").value;
+        const telefono = document.getElementById("telefono").value;
+        const servicio = document.getElementById("servicio").value;
+        const mensaje = document.getElementById("mensaje").value;
+
+        const texto =
+            "Hola, quiero reservar en GLOW NAILS STUDIO 💅%0A%0A" +
+            "👤 Nombre: " + nombre + "%0A" +
+            "📱 Teléfono: " + telefono + "%0A" +
+            "💅 Servicio: " + servicio + "%0A" +
+            "💌 Mensaje: " + mensaje;
+
+        const numero = "18095555555";
+
+        window.open(
+            "https://wa.me/" + numero + "?text=" + texto,
+            "_blank"
+        );
+
+    });
+
+</script>
+</body>
+
+</html>

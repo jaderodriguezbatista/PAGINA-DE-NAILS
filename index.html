@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GLOW NAILS STUDIO</title>
+</head>
+
+<style>
+
+   * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6ec, #d9c2ff);
+    color: #222;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+nav a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+    background: #d63384;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 50px;
+}
+
+.hero-text {
+    max-width: 750px;
+}
+
+.etiqueta {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #d63384;
+}
+
+h1 {
+    font-size: 75px;
+    line-height: 0.95;
+    margin: 20px 0;
+    letter-spacing: 4px;
+}
+
+.descripcion {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.hero-text > p:not(.etiqueta):not(.descripcion) {
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 550px;
+    margin: 20px auto 35px;
+}
+
+.boton {
+    display: inline-block;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    padding: 16px 35px;
+    border-radius: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: scale(1.06);
+    background: #d63384;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px 5px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .descripcion {
+        font-size: 22px;
+    }
+
+    .hero-text > p:not(.etiqueta):not(.descripcion) {
+        font-size: 17px;
+    }
+}
+
+.hero {
+    gap: 60px;
+}
+
+.hero-image img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px 5px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 6px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 35px;
+        padding-top: 140px;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 350px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .descripcion {
+        font-size: 22px;
+    }
+
+    .hero-text > p:not(.etiqueta):not(.descripcion) {
+        font-size: 17px;
+    }
+}
+</style>
+
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <main class="hero">
+<div class="hero-image">
+    <img src="imagenes/foto4.jpeg" alt="Diseño de uñas">
+</div>
+        <div class="hero-text">
+
+            <p class="etiqueta">✨ NAILS • BEAUTY • STYLE ✨</p>
+
+            <h1>GLOW NAILS<br>STUDIO</h1>
+
+            <p class="descripcion">
+                Tus uñas. Tu estilo. Tu momento. 💅
+            </p>
+
+            <p>
+                Diseños únicos para que tus manos
+                sean parte de tu personalidad.
+            </p>
+
+            <a class="boton" href="contacto.html">
+                Reservar cita 💖
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

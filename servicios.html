@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Servicios | GLOW NAILS STUDIO</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffd6ec, #d9c2ff);
+            color: #222;
+            text-align: center;
+        }
+
+       nav {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+      nav a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+       nav a:hover {
+    color: white;
+    background: #d63384;
+}
+
+        .contenido {
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+      .servicios-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+     .servicio {
+    background: white;
+    width: 30%;
+    min-height: 320px;
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+        .servicio:hover {
+            transform: translateY(-10px);
+        }
+
+        .servicio h2 {
+            font-size: 24px;
+        }
+
+        .servicio p {
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .precio {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d63384; }
+
+            
+    @media (max-width: 700px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        padding: 12px 5px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    nav a {
+        margin: 4px 6px;
+        font-size: 14px;
+    }
+
+    .contenido {
+        padding: 120px 15px 50px;
+    }
+
+    h1 {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .servicios-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+    .servicio {
+        width: 100%;
+        max-width: 330px;
+        padding: 25px 20px;
+        margin: 0;
+    }
+
+    .servicio h2 {
+        font-size: 22px;
+    }
+
+    .servicio p {
+        font-size: 16px;
+    }
+
+    .precio {
+        font-size: 20px !important;
+    }
+
+    .boton-servicio {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <main class="contenido">
+
+        <h1>Nuestros servicios 💅</h1>
+
+        <p class="subtitulo">
+            Elige el servicio perfecto para tus uñas ✨
+        </p>
+
+        <div class="servicios-container">
+
+    <div class="servicio">
+
+        <h2>💅 Manicura</h2>
+
+        <p>
+            Cuidado completo de tus manos y uñas
+            para mantenerlas hermosas.
+        </p>
+
+        <p class="precio">RD$ 800</p>
+
+       <a class="boton-servicio" href="contacto.html?servicio=manicura">
+    Reservar 💖
+</a>
+
+    </div>
+
+
+    <div class="servicio">
+
+        <h2>✨ Uñas acrílicas</h2>
+
+        <p>
+            Uñas resistentes y diseños modernos
+            para lucir un estilo increíble.
+        </p>
+
+        <p class="precio">RD$ 1,500</p>
+
+       <a class="boton-servicio" href="contacto.html?servicio=acrilicas">
+    Reservar 💖
+</a>
+    </div>
+
+
+    <div class="servicio">
+
+        <h2>🌸 Nail Art</h2>
+
+        <p>
+            Diseños personalizados para darle
+            un toque único a tus uñas.
+        </p>
+
+        <p class="precio">Desde RD$ 500</p>
+
+       <a class="boton-servicio" href="contacto.html?servicio=nailart">
+    Reservar 💖
+</a>
+
+    </div>
+
+</div>
+    </main>
+
+</body>
+
+</html>

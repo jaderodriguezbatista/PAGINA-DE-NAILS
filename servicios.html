@@ -5,44 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- ============================================
+         ZONA EDITABLE #1: Identidad del negocio
+         ============================================ -->
     <title>Servicios | GLOW NAILS STUDIO</title>
+    <meta name="description" content="Servicios de GLOW NAILS STUDIO: manicura, uñas acrílicas y nail art. Reserva tu cita.">
+    <meta property="og:title" content="Servicios | GLOW NAILS STUDIO">
+    <meta property="og:description" content="Manicura, uñas acrílicas y nail art. Reserva tu cita.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💅</text></svg>">
 
     <style>
+        /* ============================================
+           ZONA EDITABLE #2: Marca visual
+           Debe coincidir con las mismas variables de index.html
+           ============================================ */
+        :root {
+            --color-primario: #d63384;
+            --color-secundario: #a855f7;
+            --fondo-inicio: #ffd6ec;
+            --fondo-fin: #d9c2ff;
+            --texto-oscuro: #222;
+            --fuente: Arial, sans-serif;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffd6ec, #d9c2ff);
-            color: #222;
+            font-family: var(--fuente);
+            background: linear-gradient(135deg, var(--fondo-inicio), var(--fondo-fin));
+            color: var(--texto-oscuro);
             text-align: center;
         }
 
-       nav {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 15px 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
+        nav {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
 
-      nav a {
-    color: #222;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px;
-    font-weight: bold;
-    display: inline-block;
-    padding: 8px 12px;
-    border-radius: 20px;
-    transition: 0.3s;
-}
+        nav a {
+            color: var(--texto-oscuro);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
 
-       nav a:hover {
-    color: white;
-    background: #d63384;
-}
+        nav a:hover {
+            color: white;
+            background: var(--color-primario);
+        }
 
         .contenido {
             padding: 60px 20px;
@@ -58,27 +79,30 @@
             margin-bottom: 50px;
         }
 
-      .servicios-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 25px;
-    max-width: 1100px;
-    margin: 40px auto;
-}
+        .servicios-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 25px;
+            max-width: 1100px;
+            margin: 40px auto;
+            flex-wrap: wrap;
+        }
 
-     .servicio {
-    background: white;
-    width: 30%;
-    min-height: 320px;
-    padding: 30px 20px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+        .servicio {
+            background: white;
+            width: 30%;
+            min-height: 320px;
+            padding: 30px 20px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s;
+        }
+
         .servicio:hover {
             transform: translateY(-10px);
         }
@@ -95,76 +119,104 @@
         .precio {
             font-size: 20px;
             font-weight: bold;
-            color: #d63384; }
+            color: var(--color-primario);
+        }
 
-            
-    @media (max-width: 700px) {
+        /* Antes esta clase no tenía estilo propio y salía como link azul plano.
+           Ahora combina con el botón .boton de index.html */
+        .boton-servicio {
+            display: inline-block;
+            background: var(--texto-oscuro);
+            color: white;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    body {
-        overflow-x: hidden;
-    }
+        .boton-servicio:hover {
+            transform: scale(1.06);
+            background: var(--color-primario);
+        }
 
-    nav {
-        padding: 12px 5px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 5px;
-    }
+        /* Footer: agregado para que todas las páginas se vean consistentes */
+        footer {
+            background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
 
-    nav a {
-        margin: 4px 6px;
-        font-size: 14px;
-    }
+        footer h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
 
-    .contenido {
-        padding: 120px 15px 50px;
-    }
+        footer p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
 
-    h1 {
-        font-size: 38px;
-        line-height: 1.1;
-    }
+        @media (max-width: 700px) {
 
-    .subtitulo {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
+            body {
+                overflow-x: hidden;
+            }
 
-    .servicios-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 25px;
-    max-width: 1100px;
-    margin: 40px auto;
-}
+            nav {
+                padding: 12px 5px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
 
-    .servicio {
-        width: 100%;
-        max-width: 330px;
-        padding: 25px 20px;
-        margin: 0;
-    }
+            nav a {
+                margin: 4px 6px;
+                font-size: 14px;
+            }
 
-    .servicio h2 {
-        font-size: 22px;
-    }
+            .contenido {
+                padding: 120px 15px 50px;
+            }
 
-    .servicio p {
-        font-size: 16px;
-    }
+            h1 {
+                font-size: 38px;
+                line-height: 1.1;
+            }
 
-    .precio {
-        font-size: 20px !important;
-    }
+            .subtitulo {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
 
-    .boton-servicio {
-        font-size: 13px;
-        padding: 8px 14px;
-    }
+            .servicio {
+                width: 100%;
+                max-width: 330px;
+                padding: 25px 20px;
+                margin: 0;
+            }
 
-}
+            .servicio h2 {
+                font-size: 22px;
+            }
+
+            .servicio p {
+                font-size: 16px;
+            }
+
+            .precio {
+                font-size: 20px !important;
+            }
+
+            .boton-servicio {
+                font-size: 13px;
+                padding: 8px 14px;
+            }
+        }
     </style>
 </head>
 
@@ -185,63 +237,58 @@
             Elige el servicio perfecto para tus uñas ✨
         </p>
 
+        <!-- ============================================
+             ZONA EDITABLE #3: Servicios y precios
+             Recuerda: estos mismos precios/nombres también
+             aparecen en el <select> de contacto.html — cámbialos
+             en ambos lugares.
+             ============================================ -->
         <div class="servicios-container">
 
-    <div class="servicio">
+            <div class="servicio">
+                <h2>💅 Manicura</h2>
+                <p>
+                    Cuidado completo de tus manos y uñas
+                    para mantenerlas hermosas.
+                </p>
+                <p class="precio">RD$ 800</p>
+                <a class="boton-servicio" href="contacto.html?servicio=manicura">
+                    Reservar 💖
+                </a>
+            </div>
 
-        <h2>💅 Manicura</h2>
+            <div class="servicio">
+                <h2>✨ Uñas acrílicas</h2>
+                <p>
+                    Uñas resistentes y diseños modernos
+                    para lucir un estilo increíble.
+                </p>
+                <p class="precio">RD$ 1,500</p>
+                <a class="boton-servicio" href="contacto.html?servicio=acrilicas">
+                    Reservar 💖
+                </a>
+            </div>
 
-        <p>
-            Cuidado completo de tus manos y uñas
-            para mantenerlas hermosas.
-        </p>
+            <div class="servicio">
+                <h2>🌸 Nail Art</h2>
+                <p>
+                    Diseños personalizados para darle
+                    un toque único a tus uñas.
+                </p>
+                <p class="precio">Desde RD$ 500</p>
+                <a class="boton-servicio" href="contacto.html?servicio=nailart">
+                    Reservar 💖
+                </a>
+            </div>
 
-        <p class="precio">RD$ 800</p>
-
-       <a class="boton-servicio" href="contacto.html?servicio=manicura">
-    Reservar 💖
-</a>
-
-    </div>
-
-
-    <div class="servicio">
-
-        <h2>✨ Uñas acrílicas</h2>
-
-        <p>
-            Uñas resistentes y diseños modernos
-            para lucir un estilo increíble.
-        </p>
-
-        <p class="precio">RD$ 1,500</p>
-
-       <a class="boton-servicio" href="contacto.html?servicio=acrilicas">
-    Reservar 💖
-</a>
-    </div>
-
-
-    <div class="servicio">
-
-        <h2>🌸 Nail Art</h2>
-
-        <p>
-            Diseños personalizados para darle
-            un toque único a tus uñas.
-        </p>
-
-        <p class="precio">Desde RD$ 500</p>
-
-       <a class="boton-servicio" href="contacto.html?servicio=nailart">
-    Reservar 💖
-</a>
-
-    </div>
-
-</div>
+        </div>
     </main>
 
+    <footer>
+        <h3>GLOW NAILS STUDIO</h3>
+        <p>Diseños de uñas hechos con amor ✨</p>
+        <p>© 2026 GLOW NAILS STUDIO - Todos los derechos reservados.</p>
+    </footer>
 </body>
 
 </html>

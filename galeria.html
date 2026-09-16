@@ -5,44 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- ============================================
+         ZONA EDITABLE #1: Identidad del negocio
+         ============================================ -->
     <title>Galería | GLOW NAILS STUDIO</title>
+    <meta name="description" content="Galería de diseños de GLOW NAILS STUDIO. Inspírate para tu próxima cita.">
+    <meta property="og:title" content="Galería | GLOW NAILS STUDIO">
+    <meta property="og:description" content="Algunos diseños para inspirarte.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💅</text></svg>">
 
     <style>
+        /* ============================================
+           ZONA EDITABLE #2: Marca visual
+           Debe coincidir con index.html, servicios.html y contacto.html
+           ============================================ */
+        :root {
+            --color-primario: #d63384;
+            --color-secundario: #a855f7;
+            --fondo-inicio: #ffd6ec;
+            --fondo-fin: #d9c2ff;
+            --texto-oscuro: #222;
+            --fuente: Arial, sans-serif;
+        }
+
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffd6ec, #d9c2ff);
-            color: #222;
+            font-family: var(--fuente);
+            background: linear-gradient(135deg, var(--fondo-inicio), var(--fondo-fin));
+            color: var(--texto-oscuro);
             text-align: center;
         }
 
-      nav {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 15px 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-}
+        nav {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 15px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
 
-      nav a {
-    color: #222;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 16px;
-    font-weight: bold;
-    display: inline-block;
-    padding: 8px 12px;
-    border-radius: 20px;
-    transition: 0.3s;
-}
+        nav a {
+            color: var(--texto-oscuro);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
 
         nav a:hover {
-    color: white;
-    background: #d63384;
-}
+            color: white;
+            background: var(--color-primario);
+        }
 
         .contenido {
             padding: 60px 20px;
@@ -67,25 +88,46 @@
         }
 
         .foto {
-    background: white;
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-    overflow: hidden;
-    transition: 0.3s;
-}
+            background: white;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            transition: 0.3s;
+        }
 
-.foto:hover {
-    transform: translateY(-8px);
-}
+        .foto:hover {
+            transform: translateY(-8px);
+        }
 
-       .foto img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-    border-radius: 15px;
-}
+        .foto img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        /* Footer: agregado para consistencia con el resto de páginas */
+        footer {
+            background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
         @media (max-width: 700px) {
 
             .galeria {
@@ -121,46 +163,61 @@
             Algunos diseños para inspirarte 💖
         </p>
 
+        <!-- ============================================
+             ZONA EDITABLE #3: Fotos
+             Todas usan ruta relativa a la carpeta Imagenes/.
+             Antes foto1.jpeg apuntaba con URL absoluta al
+             repositorio original — si no se corregía, esa foto
+             nunca iba a cambiar aunque el comprador reemplazara
+             todo el contenido de la carpeta Imagenes.
+             ============================================ -->
         <div class="galeria">
 
             <div class="foto">
-                <img src="https://jaderodriguezbatista.github.io/PAGINA-DE-NAILS/Imagenes/foto1.jpeg" alt="Diseño de uñas 1">
+                <img src="Imagenes/foto1.jpeg" alt="Diseño de uñas 1" loading="lazy">
             </div>
 
             <div class="foto">
-                <img src="Imagenes/foto2.jpeg" alt="Diseño de uñas 2">
+                <img src="Imagenes/foto2.jpeg" alt="Diseño de uñas 2" loading="lazy">
             </div>
 
             <div class="foto">
-                <img src="Imagenes/foto3.jpeg" alt="Diseño de uñas 3">
+                <img src="Imagenes/foto3.jpeg" alt="Diseño de uñas 3" loading="lazy">
             </div>
 
             <div class="foto">
-                <img src="Imagenes/foto4.jpeg" alt="Diseño de uñas 4">
+                <img src="Imagenes/foto4.jpeg" alt="Diseño de uñas 4" loading="lazy">
             </div>
 
             <div class="foto">
-                <img src="Imagenes/foto5.jpeg" alt="Diseño de uñas 5">
+                <img src="Imagenes/foto5.jpeg" alt="Diseño de uñas 5" loading="lazy">
             </div>
 
             <div class="foto">
-                <img src="Imagenes/foto6.jpeg" alt="Diseño de uñas 6">
+                <img src="Imagenes/foto6.jpeg" alt="Diseño de uñas 6" loading="lazy">
             </div>
 
             <div class="foto">
-                <img src="Imagenes/foto7.jpeg" alt="Diseño de uñas 7">
+                <img src="Imagenes/foto7.jpeg" alt="Diseño de uñas 7" loading="lazy">
             </div>
 
             <div class="foto">
-                <img src="Imagenes/foto8.jpeg" alt="Diseño de uñas 8">
+                <img src="Imagenes/foto8.jpeg" alt="Diseño de uñas 8" loading="lazy">
             </div>
 
             <div class="foto">
-                <img src="Imagenes/foto9.jpeg" alt="Diseño de uñas 9">
+                <img src="Imagenes/foto9.jpeg" alt="Diseño de uñas 9" loading="lazy">
             </div>
         </div>
 
     </main>
+
+    <footer>
+        <h3>GLOW NAILS STUDIO</h3>
+        <p>Diseños de uñas hechos con amor ✨</p>
+        <p>© 2026 GLOW NAILS STUDIO - Todos los derechos reservados.</p>
+    </footer>
+
 <script>
 
     const fotos = document.querySelectorAll(".foto img");

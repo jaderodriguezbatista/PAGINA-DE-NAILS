@@ -5,20 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- ============================================
+         ZONA EDITABLE #1: Identidad del negocio
+         Cambia estos valores para personalizar la marca
+         ============================================ -->
     <title>GLOW NAILS STUDIO</title>
+    <meta name="description" content="GLOW NAILS STUDIO - Diseños de uñas únicos. Reserva tu cita y luce un estilo increíble.">
+
+    <!-- Open Graph: controla cómo se ve el link al compartirlo por WhatsApp/redes -->
+    <meta property="og:title" content="GLOW NAILS STUDIO">
+    <meta property="og:description" content="Diseños de uñas únicos. Reserva tu cita.">
+    <meta property="og:image" content="Imagenes/foto4.jpeg">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon: reemplaza este emoji-favicon por el logo del cliente si tiene uno -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💅</text></svg>">
 </head>
 
 <style>
 
-   * {
+/* ============================================
+   ZONA EDITABLE #2: Marca visual
+   Cambia estas variables para adaptar la plantilla
+   a otro negocio (colores, tipografía, nombre)
+   ============================================ */
+:root {
+    --color-primario: #d63384;      /* Color de acento (nav hover, botón hover, etiqueta) */
+    --color-secundario: #a855f7;    /* Segundo color del degradado */
+    --fondo-inicio: #ffd6ec;        /* Color 1 del fondo del hero */
+    --fondo-fin: #d9c2ff;           /* Color 2 del fondo del hero */
+    --texto-oscuro: #222;
+    --fuente: Arial, sans-serif;
+}
+
+* {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ffd6ec, #d9c2ff);
-    color: #222;
+    font-family: var(--fuente);
+    background: linear-gradient(135deg, var(--fondo-inicio), var(--fondo-fin));
+    color: var(--texto-oscuro);
 }
 
 nav {
@@ -32,7 +60,7 @@ nav {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 nav a {
-    color: #222;
+    color: var(--texto-oscuro);
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
@@ -45,7 +73,7 @@ nav a {
 
 nav a:hover {
     color: white;
-    background: #d63384;
+    background: var(--color-primario);
 }
 
 .hero {
@@ -55,6 +83,7 @@ nav a:hover {
     align-items: center;
     text-align: center;
     padding: 120px 20px 50px;
+    gap: 60px;
 }
 
 .hero-text {
@@ -65,7 +94,7 @@ nav a:hover {
     font-size: 15px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: #d63384;
+    color: var(--color-primario);
 }
 
 h1 {
@@ -89,7 +118,7 @@ h1 {
 
 .boton {
     display: inline-block;
-    background: #222;
+    background: var(--texto-oscuro);
     color: white;
     text-decoration: none;
     padding: 16px 35px;
@@ -101,25 +130,36 @@ h1 {
 
 .boton:hover {
     transform: scale(1.06);
-    background: #d63384;
+    background: var(--color-primario);
 }
- footer {
-            background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
-        }
 
-        footer h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+.hero-image img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
 
-        footer p {
-            margin: 8px 0;
-            font-size: 15px;
-        }
+/* Footer: antes estaba anidado dentro de la media query de móvil
+   y por eso no se veía en pantallas grandes. Ahora es global. */
+footer {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 15px;
+}
 
 @media (max-width: 700px) {
 
@@ -155,7 +195,6 @@ h1 {
     .hero-text > p:not(.etiqueta):not(.descripcion) {
         font-size: 17px;
     }
-   
 }
 </style>
 
@@ -169,11 +208,13 @@ h1 {
     </nav>
 
     <main class="hero">
-<div class="hero-image">
-    <img src="Imagenes/foto4.jpeg" alt="Diseño de uñas">
-</div>
+        <div class="hero-image">
+            <!-- ZONA EDITABLE #3: cambia la foto por una del negocio real -->
+            <img src="Imagenes/foto4.jpeg" alt="Diseño de uñas">
+        </div>
         <div class="hero-text">
 
+            <!-- ZONA EDITABLE #4: textos del hero -->
             <p class="etiqueta">✨ NAILS • BEAUTY • STYLE ✨</p>
 
             <h1>GLOW NAILS<br>STUDIO</h1>
@@ -194,11 +235,11 @@ h1 {
         </div>
 
     </main>
-<footer>
-    <h3>GLOW NAILS STUDIO</h3>
-    <p>Diseños de uñas hechos con amor ✨</p>
-    <p>© 2026 GLOW NAILS STUDIO - Todos los derechos reservados.</p>
-</footer>
+    <footer>
+        <h3>GLOW NAILS STUDIO</h3>
+        <p>Diseños de uñas hechos con amor ✨</p>
+        <p>© 2026 GLOW NAILS STUDIO - Todos los derechos reservados.</p>
+    </footer>
 </body>
 
 </html>
